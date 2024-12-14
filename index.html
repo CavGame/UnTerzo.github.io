@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Un Terzo</title>
+    <title>Un Terzo - Chat</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="account">
-            <span>Account: <a href="mailto:account@unterzo.com">account@unterzo.com</a></span>
-        </div>
+    <!-- Area Login -->
+    <div id="login-container">
+        <h1>Benvenuto in Un Terzo</h1>
+        <form id="login-form">
+            <label for="username">Crea il tuo nome utente:</label>
+            <input type="text" id="username" placeholder="Inserisci il tuo nome utente" required>
+            <button type="submit">Crea Account</button>
+        </form>
     </div>
 
-    <div class="main-container">
+    <!-- Area Chat -->
+    <div id="chat-container" class="hidden">
+        <!-- Barra laterale sinistra -->
         <div class="sidebar">
-            <div class="contact">
-                <span>Chat con: <strong>UnTerzoBro@gmail.com</strong></span>
-            </div>
+            <h2>Tutte le chat</h2>
+            <ul>
+                <li class="active-chat">UnTerzoBro@gmail.com</li>
+            </ul>
         </div>
 
+        <!-- Finestra della chat -->
         <div class="chat-window">
             <div class="header">
-                <div class="call-icons">
-                    <button>Chiamata</button>
-                    <button>Videochiamata</button>
-                    <button>Invio Immagini</button>
-                </div>
+                <h3>Chat con: UnTerzoBro@gmail.com</h3>
             </div>
-            
             <div class="messages">
-                <!-- Qui vanno i messaggi -->
+                <!-- Qui verranno mostrati i messaggi --> 
             </div>
-
             <div class="message-input">
                 <input type="text" placeholder="Scrivi un messaggio...">
                 <button>Invia</button>
