@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Icona per l'accesso in alto a destra -->
+    <!-- Header con pulsante Accedi -->
     <div id="header">
-        <div class="access-icon">
-            <button title="Accedi al tuo account">🔑 Accedi</button>
+        <div class="access-icon" style="float: right;">
+            <a href="account.html" title="Accedi al tuo account">🔑 Accedi</a>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
             <!-- Barra superiore -->
             <div class="top-bar">
                 <h3>UnTerzoBro@gmail.com</h3>
-                <div class="actions">
+                <div class="actions" style="float: right;">
                     <button title="Chiamata">📞</button>
                     <button title="Videochiamata">🎥</button>
                 </div>
@@ -42,7 +42,7 @@
             </div>
 
             <!-- Input messaggi -->
-            <div class="message-input">
+            <div class="message-input" style="text-align: center;">
                 <input type="text" id="chat-text" placeholder="Scrivi un messaggio...">
                 <label for="image-upload" class="image-upload-btn">📎</label>
                 <input type="file" id="image-upload" accept="image/*" style="display: none;">
