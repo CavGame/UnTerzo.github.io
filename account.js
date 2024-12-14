@@ -3,7 +3,7 @@
 // Funzione per generare un'email unica basata sul nome utente
 function generateEmail(username) {
     const domain = "unterzo.com";
-    const sanitizedUsername = username.replace(/\s+/g, '').toLowerCase(); // Rimuove spazi e converte in minuscolo
+    const sanitizedUsername = username.replace(/\\s+/g, '').toLowerCase(); // Rimuove spazi e converte in minuscolo
     return `${sanitizedUsername}@${domain}`;
 }
 
@@ -31,6 +31,13 @@ document.getElementById('account-form').addEventListener('submit', function(even
     const emailInput = document.getElementById('email');
 
     const username = usernameInput.value.trim();
+
+    // Verifica che il nome utente non sia vuoto
+    if (!username) {
+        alert("Errore: il nome utente non può essere vuoto!");
+        return;
+    }
+
     const email = generateEmail(username);
 
     // Aggiorna il campo email con l'indirizzo generato
