@@ -7,37 +7,46 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Area Login -->
-    <div id="login-container">
-        <h1>Benvenuto in Un Terzo</h1>
-        <form id="login-form">
-            <label for="username">Crea il tuo nome utente:</label>
-            <input type="text" id="username" placeholder="Inserisci il tuo nome utente" required>
-            <button type="submit">Crea Account</button>
-        </form>
+    <!-- Icona per l'accesso in alto a destra -->
+    <div id="header">
+        <div class="access-icon">
+            <button title="Accedi al tuo account">🔑 Accedi</button>
+        </div>
     </div>
 
-    <!-- Area Chat -->
-    <div id="chat-container" class="hidden">
+    <div id="app">
         <!-- Barra laterale sinistra -->
         <div class="sidebar">
-            <h2>Tutte le chat</h2>
+            <h2>Un Terzo</h2>
             <ul>
                 <li class="active-chat">UnTerzoBro@gmail.com</li>
             </ul>
         </div>
 
-        <!-- Finestra della chat -->
-        <div class="chat-window">
-            <div class="header">
-                <h3>Chat con: UnTerzoBro@gmail.com</h3>
+        <!-- Area centrale -->
+        <div class="main-content">
+            <!-- Barra superiore -->
+            <div class="top-bar">
+                <h3>UnTerzoBro@gmail.com</h3>
+                <div class="actions">
+                    <button title="Chiamata">📞</button>
+                    <button title="Videochiamata">🎥</button>
+                </div>
             </div>
-            <div class="messages">
-                <!-- Qui verranno mostrati i messaggi --> 
+
+            <!-- Area messaggi -->
+            <div class="chat-window">
+                <div class="messages">
+                    <!-- Messaggi della chat -->
+                </div>
             </div>
+
+            <!-- Input messaggi -->
             <div class="message-input">
-                <input type="text" placeholder="Scrivi un messaggio...">
-                <button>Invia</button>
+                <input type="text" id="chat-text" placeholder="Scrivi un messaggio...">
+                <label for="image-upload" class="image-upload-btn">📎</label>
+                <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                <button id="send-message">Invia</button>
             </div>
         </div>
     </div>
